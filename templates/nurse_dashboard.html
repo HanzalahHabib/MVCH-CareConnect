@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='nurse_dashboard.css') }}">
+</head>
+<body>
+    <h1>Nurse Dashboard</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Bed Number</th>
+                <th>Patient Name</th>
+                <th>Disease</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ward in wards %}
+            <tr>
+                <td>{{ ward.bed_no }}</td>
+                <td>{{ ward.patient_name }}</td>
+                <td>{{ ward.disease }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
