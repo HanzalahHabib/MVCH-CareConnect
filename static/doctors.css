@@ -1,0 +1,105 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Table Styles */
+table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #3498db;
+    color: #fff;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+}
+
+th {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Checkbox Status */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: background-color 0.3s ease, border 0.3s ease;
+    border: 2px solid #ddd;
+}
+
+/* Style for checked (executed) appointments */
+input[type="checkbox"]:checked {
+    background-color: #2ecc71; /* Green */
+    border-color: #27ae60;
+}
+
+/* Style for unchecked (not executed) appointments */
+input[type="checkbox"]:not(:checked) {
+    background-color: #e74c3c; /* Red */
+    border-color: #c0392b;
+}
+
+/* Empty Table Message */
+td[colspan="3"] {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #e74c3c;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
